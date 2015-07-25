@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Pull Requests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section JavaScriptInHead
+{
+    <script src="~/Scripts/Controllers/OpenRequest/openrequest-controller.js"></script>
+    <script src="~/Scripts/Controllers/OpenRequest/openrequest-repository.js"></script>
+    <script src="~/Scripts/Controllers/MergeReady/mergeready-controller.js"></script>
+    <script src="~/Scripts/Controllers/MergeReady/mergeready-repository.js"></script>
+    <script src="~/Scripts/Controllers/OpenBranch/openbranch-controller.js"></script>
+    <script src="~/Scripts/Controllers/OpenBranch/openbranch-repository.js"></script>
+    <script src="~/Scripts/Controllers/PullRequest/pullrequest-controller.js"></script>
+    <script src="~/Scripts/Controllers/PullRequest/pullrequest-repository.js"></script>
+}
+
+<div class="container">
+    <div class="row headerstyle">
+        <div class="span10">
+            <h2>Git Administrator</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="navbar navbar-default">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/PullRequest/Open">Open Requests</a></li>
+                    <li><a href="/PullRequest/MergeReady">Merge Ready</a></li>
+                    <li><a href="/PullRequest/OpenBranch">Open Branches</a></li>
+                    <li><a href="/PullRequest/BuildAndMerge">Build And Merge Branch</a></li>
+                    <li><a href="/PullRequest/Hooks">Hooks</a></li>
+                    <li><a href="/PullRequest/Permission">Permissions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div ng-view ng-cloak></div>
+</div>

@@ -1,0 +1,49 @@
+﻿<div class="row headerstyle">
+    <div class="span10">
+        <h2>Open Branches</h2>
+    </div>
+</div>
+
+<div class="Table">
+    <div class="Heading">
+        <div>
+            <div>
+                <div>
+                    <div class="Cell">
+                        <p>Repository</p>
+                    </div>
+                    <div class="Cell">
+                        <p>Author</p>
+                    </div>
+                    <div class="Cell">
+                        <p>Title</p>
+                    </div>
+                    <div class="Cell">
+                        <p>Date Created</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div ng-repeat="openBranchrequest in openBranchrequests">
+        <div ng-repeat="request in openBranchrequest">
+            <div ng-repeat="value in request.Values">
+                <div class="DivRow">
+                    <div class="Cell">
+                        <p>{{value.ToRef.Repository.Slug}}</p>
+                    </div>
+                    <div class="Cell">
+                        <p>{{value.Author.User.DisplayName}}</p>
+                    </div>
+                    <div class="Cell">
+                        <p><a href="{{value.Link.Url}}" ng-href="{{value.Link.Url}}">{{value.FromRef.DisplayId}}</a></p>
+                    </div>
+                    <div class="Cell">
+                        <p>{{value.CreatedDate | date:'dd-MMM-yyyy'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

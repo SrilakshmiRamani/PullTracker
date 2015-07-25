@@ -1,0 +1,66 @@
+﻿.rowstyle {
+    padding-left: 5px;
+    padding-bottom: 3px;
+    font-size: 15;
+    font-style: oblique;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.headerstyle {
+    padding-left: 5px;
+    padding-bottom: 3px;
+    font-size: 20;
+    font-style: oblique;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}   
+
+.Table
+    {
+        display: table;
+        border-collapse:collapse;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;  
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+    .DivRow
+    {
+        display: table-row; 
+    }
+    .DivRow:hover {
+         /*background-color: #737CA1;*/
+         background-color: #485563;
+    }
+    .Cell
+    {
+        display: table-cell;
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 255px;
+        height: 24px;
+        border-bottom: 1px solid #333;
+        font-size: 15;
+        font-family: sans-serif;
+    }
+.scroll
+{
+
+height:500PX;
+FLOAT: left;
+margin-left: 5%;
+padding: 1%;
+/*overflow:scroll;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
