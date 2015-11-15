@@ -1,31 +1,60 @@
-# PullTracker
-This application is to track the status of Pull requests of all repositories
+# PullTracker - A GIT Integrated Tool
 
-Today in GIT, we can see the open / unmerged pull request only if we navigae to the application repository. At times, it is tedious to look into 20 different applications for open / unmerged pull request. This results in the possibility of missing to approve or merge pull requests. This tool helps in avoiding this issue, as it acts as a face for all repositories. 
+## Purpose
+The idea is to demonstrate how effectively we can use the REST resources provied by Stash
+REST API to develop plugins that enhance the Stash UI. To showcase the usage, AngularJs is used
+as the front end tool. The sample application tries to show the best practices when it comes to 
+application architecutre including controllers, models, repositories, ApiConsumers and 
+Configuration.
 
+##Application Concept
+Today in GIT, activities of an application like pull request status, application 
+settings, hooks, Permissions and Jenkins integration only if we navigtae to the application 
+repository. At times, it is tedious to look into 20 different applications for open / unmerged 
+pull request or other activites. This tool helps in avoiding all this overhead as it acts as 
+a visual interface for all repositories.
+
+##Build
+* AngularJs as front end tool
+* Bootstrap.js as frontend backbone
+* C# .NET as backend language
+
+##Installation
+###Get the Code
+Clone the repository using the command
+git clone https://github.com/SriRamani87/PullTracker.git
+
+##Application Configuration
+Open web.config and configure the below in app settings section.
+* username - Configure the user account name that will be used to access GIT (mention this with domain, if any).
+* NetworkUserName - Configure the user account name that will be used to access GIT
+* password - Configure the user account password that will be used to access GIT
+* UrlDomain - Configure the domain URL where your GIT repository reside
+* Repository - Append the repository path in your GIT domain to the existing REST path configured
+* SourceBranch - Leave the SourceBranch path as is - This is generic for all repositories and domain
+* TargetBranch - Leave the TargetBranch path as is - This is generic for all repositories and domain
+* Hooks - Leave the Hooks path as is - This is generic for all repositories and domain
+* OpenRequest - Leave the OpenRequest path as is - This is generic for all repositories and domain
+* MergeRequest - Leave the MergeRequest path as is - This is generic for all repositories and domain
+* Branch - Leave the Branch path as is - This is generic for all repositories and domain
+
+##Application Server Configuration
+* Open inetmgr on the Server
+* Add a new site by configuring to the cloned path
+* Complete the site set up
+
+##Implemented Features
 Below are the features present in the tool today.
-1. Open Requests: Will fetch all open pull requests across repositories.
-2. Merge Ready: Will fetch all approved but un merged pull requests.
-3. Open Branches: Will fetch all branches without a pull request.
-4. Build And Merge: Will facilitate merging the branch to master with an integration with Jenkins.
-5. Hooks: Fetches the hooks of all repositories
-6. Permission: Fetches the permission level for all repositories
+* Open Requests: Will fetch all open pull requests across repositories.
+* Merge Ready: Will fetch all approved but un merged pull requests.
+* Open Branches: Will fetch all branches without a pull request.
+* Build And Merge: Will facilitate merging the branch to master with an integration with Jenkins.
+* Hooks: Fetches the hooks of all repositories
+* Permission: Fetches the permission level for all repositories
 
-To run the application, please configure the below settigns.
-1. username: This will be the user name used to login to the git repository
-2. password: This will be the password used to login to git repository
-3. NetworkUserName: This will be the network username (with domain)
-4. UrlDomain: This will be GIT repository Domain URL
-5. Repository: This is the GIT Repository Name
-6. SourceBranch: This will be  Source Branch path of Stash Api
-7. TargetBranch: This will be the TargetBranch Path of Stash Api 
-8. Hooks: This will be Hooks path from Stash Api 
-9. OpenRequest: This will be the open request path of the Stash Api Call
-10. MergeRequest: This will the merge request path of the Stash Api Call
-11. Branch:  This will be the Stash Api path to call the Branch
-
+##Proposed Features in Future (Under Development)
 Below are the features in scope for the future:
-1. To provide a filter at all columns, so that user can filter the records of his interest.
-2. Some performance tuning
-3. Implement the features Build And Merge, Hooks and Permission.
-4. Provide Pagination for Open Branches to look through all branches (today its deaulted to first 25)
+* To provide a filter at all columns, so that user can filter the records of his interest.
+* Some performance tuning
+* Implement the features Build And Merge, Hooks and Permission.
+* Provide Pagination for Open Branches to look through all branches (today its deaulted to first 25)
