@@ -8,11 +8,15 @@ application architecutre including controllers, models, repositories, ApiConsume
 Configuration.
 
 ##Application Concept
-Today in GIT, activities of an application like pull request status, application 
-settings, hooks, Permissions and Jenkins integration only if we navigtae to the application 
-repository. At times, it is tedious to look into 20 different applications for open / unmerged 
-pull request or other activites. This tool helps in avoiding all this overhead as it acts as 
-a visual interface for all repositories.
+At times, it is tedious to look into 20 different applications for open / unmerged 
+pull request or other activites. This tool acts as a visual interface for all repositories to monitor 
+activities of all applications like 
+		* pull request status
+		* application 
+		* settings
+		* hooks
+		* Permissions 
+		* Jenkins integration. 
 
 ##Build
 * AngularJs as front end tool
